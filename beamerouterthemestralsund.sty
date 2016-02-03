@@ -1,0 +1,54 @@
+\mode<presentation>
+
+\newlength{\sectionboxwd}
+\setlength{\sectionboxwd}{2cm}
+\newlength{\taglineboxwd}
+\setlength{\taglineboxwd}{5.7cm}
+\newlength{\authorboxwd}
+\setlength{\authorboxwd}{\dimexpr\paperwidth-.1cm-\taglineboxwd-\sectionboxwd\relax}
+
+% Frame title
+\defbeamertemplate*{frametitle}{stralsund}[1][]
+{
+	\vskip.3cm
+	\begin{beamercolorbox}[wd=.7\paperwidth,ht=1.2cm]{frametitle}%
+		\usebeamerfont{frametitle} \insertframetitle \\
+		\usebeamerfont{framesubtitle} \beamer@ifempty{\insertframesubtitle}{}{\insertframesubtitle}
+	\end{beamercolorbox}%
+	
+	\begin{tikzpicture}[remember picture,overlay]
+		\node[anchor=north east,yshift=-3pt,xshift=-10pt] at (current page.north east) {\includegraphics[width=.2\paperwidth]{img/fh_stralsund}};
+	\end{tikzpicture}	
+}
+
+\defbeamertemplate*{footline}{stralsund}[1][]
+{
+	\leavevmode
+	\begin{beamercolorbox}[wd=\authorboxwd,ht=.4cm,dp=.1cm,left,leftskip=.2cm]{author in head/foot}%
+		\usebeamerfont{author in head/foot}\insertauthor~~\beamer@ifempty{\insertshortinstitute}{}{(\insertshortinstitute)}
+	\end{beamercolorbox}%
+	\begin{beamercolorbox}[wd=\taglineboxwd,ht=.4cm,dp=.1cm]{tagline-de}%
+		\usebeamerfont{tagline}praxis verstehen -- chancen erkennen -- zukunft gestalten
+		\begin{beamercolorbox}[wd=\taglineboxwd,ht=.15cm,dp=.1cm]{tagline-en}%
+			\usebeamerfont{tagline}understanding reality -- facing challenges -- creating future
+		\end{beamercolorbox}%
+	\end{beamercolorbox}%
+	\begin{beamercolorbox}[wd=.1cm,ht=.4cm,center]{}%
+	\end{beamercolorbox}%
+	\begin{beamercolorbox}[wd=\sectionboxwd,ht=.4cm,dp=.1cm,center]{section in head/foot}%
+		\usebeamerfont{section in head/foot}\insertframenumber
+	\end{beamercolorbox}%
+}
+
+\defbeamertemplate*{sidebar canvas left}{stralsund}[1][]
+{
+ \vskip2cm
+ \begin{beamercolorbox}[wd=.8cm,ht=.15cm]{orangebox}
+ \end{beamercolorbox}
+ \vskip.2cm
+ \begin{beamercolorbox}[wd=.8cm]{sidebar}
+	 \hspace{.3cm}\rotatebox{90}{\inserttitle}
+ \end{beamercolorbox}
+}
+
+\mode<all>
