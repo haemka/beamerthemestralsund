@@ -1,3 +1,12 @@
+% Copyright 2016 by Henner M. Kruse <henner.m.kruse@fh-stralsund.de>
+%
+% This file may be distributed and/or modified
+%
+% 1. under the LaTeX Project Public License and/or
+% 2. under the GNU Public License.
+%
+% See the file doc/licenses/LICENSE for more details.
+
 \mode<presentation>
 
 \newlength{\sectionboxwd}
@@ -24,18 +33,18 @@
 \defbeamertemplate*{footline}{stralsund}[1][]
 {
 	\leavevmode
-	\begin{beamercolorbox}[wd=\authorboxwd,ht=.4cm,dp=.1cm,left,leftskip=.2cm]{author in head/foot}%
+	\begin{beamercolorbox}[wd=\authorboxwd,ht=.4cm,dp=.05cm,left,leftskip=.2cm]{author in head/foot}%
 		\usebeamerfont{author in head/foot}\insertauthor~~\beamer@ifempty{\insertshortinstitute}{}{(\insertshortinstitute)}
 	\end{beamercolorbox}%
-	\begin{beamercolorbox}[wd=\taglineboxwd,ht=.4cm,dp=.1cm]{tagline-de}%
+	\begin{beamercolorbox}[wd=\taglineboxwd,ht=.4cm,dp=.05cm]{tagline-de}%
 		\usebeamerfont{tagline}praxis verstehen -- chancen erkennen -- zukunft gestalten
-		\begin{beamercolorbox}[wd=\taglineboxwd,ht=.15cm,dp=.1cm]{tagline-en}%
+		\begin{beamercolorbox}[wd=\taglineboxwd,ht=.15cm,dp=.05cm]{tagline-en}%
 			\usebeamerfont{tagline}understanding reality -- facing challenges -- creating future
 		\end{beamercolorbox}%
 	\end{beamercolorbox}%
 	\begin{beamercolorbox}[wd=.1cm,ht=.4cm,center]{}%
 	\end{beamercolorbox}%
-	\begin{beamercolorbox}[wd=\sectionboxwd,ht=.4cm,dp=.1cm,center]{section in head/foot}%
+	\begin{beamercolorbox}[wd=\sectionboxwd,ht=.4cm,dp=.05cm,center]{section in head/foot}%
 		\usebeamerfont{section in head/foot}\insertframenumber
 	\end{beamercolorbox}%
 }

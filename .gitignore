@@ -160,3 +160,6 @@ pythontex-files-*/
 
 # Latexian
 TSWLatexianTemp*
+
+# gitinfo
+gitHeadInfo.gin
