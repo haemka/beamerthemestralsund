@@ -9,20 +9,42 @@
 
 \mode<presentation>
 
+\usepackage[light]{sourcesanspro}
+
 % colors
 \usepackage{xcolor}
-\definecolor{csred}{cmyk}{0.1,1,0.8,0}
-\definecolor{mbblue}{cmyk}{0.8,0.56,0.08,0.4}
-\definecolor{wsturqoise}{cmyk}{1,0.3,0.3,0.2}
-\definecolor{etiyellow}{cmyk}{0,0.45,1,0.0}
+\definecolor{csred}{cmyk}{0,1,1,0}
 \definecolor{bggray}{cmyk}{0,0,0,0.0824}
 \definecolor{fggray}{cmyk}{0,0,0,0.498}
-\colorlet{maincolor}{etiyellow}
+\colorlet{maincolor}{csred}
 
 % Settings
-\setbeamerfont*{section in head/foot}{size={\fontsize{14}{26}}}
-\setbeamerfont*{author in head/foot}{size={\fontsize{9}{11}}}
-\setbeamerfont*{tagline}{series=\bfseries,size={\fontsize{6}{8}}}
+\setbeamerfont{normal text}{size*={20}{24},series=\mdseries}
+\setbeamerfont{section name}{size*={20}{24},series=\mdseries}
+\setbeamerfont{section page}{size*={20}{24},series=\mdseries}
+\setbeamerfont{section in page}{size*={20}{24},series=\mdseries}
+\setbeamerfont{section in sidebar}{size*={20}{24},series=\mdseries}
+\setbeamerfont{section in head/foot}{size*={20}{24},series=\mdseries}
+\setbeamerfont{projected text}{size*={20}{24},series=\mdseries}
+\setbeamerfont{structure}{series=\mdseries}
+
+\setbeamerfont{tiny structure}{series=\mdseries}
+\setbeamerfont{frametitle}{size=\large,series=\mdseries} % ,series=\bfseries
+\setbeamerfont{framesubtitle}{size=\footnotesize,series=\mdseries}
+\setbeamerfont{footline}{size=\Tiny,series=\mdseries}
+\setbeamerfont{title}{size*={16}{18},series=\bfseries}
+\setbeamerfont{subtitle}{size*={10}{12},series=\mdseries}
+
+\setbeamerfont{item}{size*={10}{12},series=\mdseries}
+\setbeamerfont{item projected}{size*={10}{12},series=\mdseries}
+\setbeamerfont{itemize item}{size*={10}{12},series=\mdseries}
+\setbeamerfont{itemize subitem}{size*={10}{12},series=\mdseries}
+\setbeamerfont{itemize subsubitem}{size*={10}{12},series=\mdseries}
+\setbeamerfont{itemize/enumerate body}{size*={10}{12},series=\mdseries}
+\setbeamerfont{itemize/enumerate subbody}{size*={10}{12},series=\mdseries}
+\setbeamerfont{itemize/enumerate subsubbody}{size*={10}{12},series=\mdseries}
+
+\setbeamerfont*{tagline}{size={\fontsize{9}{11}},series=\mdseries}
 
 
 \setbeamercolor*{title page header}{fg=black}
@@ -33,10 +55,8 @@
 \setbeamercolor*{author}{fg=black}
 \setbeamercolor*{date}{fg=black}
 \setbeamercolor*{item}{fg=maincolor}
-\setbeamercolor*{section in head/foot}{bg=maincolor}
-\setbeamercolor*{author in head/foot}{bg=bggray}
-\setbeamercolor*{tagline-de}{fg=maincolor,bg=white}
-\setbeamercolor*{tagline-en}{fg=fggray,bg=bggray}
+\setbeamercolor*{tagline}{fg=white,bg=maincolor}
+\newcommand{\HOSTstring}{H\textcolor{black}{O}ST -- Hochschule Stralsund~\textbullet~Zur Schwedenschanze 15~\textbullet~18435 Stralsund~\textbullet~www.\textbf{ho}chschule-\textbf{st}ralsund.de}
 
 % Items
 \setbeamertemplate{items}[square]

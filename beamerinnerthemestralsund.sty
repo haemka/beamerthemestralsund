@@ -12,18 +12,20 @@
 % Title page
 \defbeamertemplate*{title page}{stralsund}[1][]
 { 
-	\vskip2cm
+	\vskip1.5cm
 	\begin{beamercolorbox}[wd=.8\paperwidth,ht=1.6cm,center]{title page header}%
-		\usebeamerfont{title}\inserttitle%
+		\usebeamerfont{title}\inserttitle\\%
+		\vspace{.2cm}%
+		\usebeamerfont{subtitle}\insertsubtitle%
 	\end{beamercolorbox}%
 	\vskip.5cm
-	\begin{beamercolorbox}[wd=0.7\paperwidth,ht=2cm,center]{title page header}%
+	\begin{beamercolorbox}[wd=.8\paperwidth,ht=2cm,center]{title page header}%
 		\usebeamerfont{author}\insertauthor\par%
 		\usebeamerfont{author}\insertdate%
 	\end{beamercolorbox}%
 	\vfill
 	
 	\begin{tikzpicture}[remember picture,overlay]
-		\node[anchor=north east,yshift=-3pt,xshift=-10pt] at (current page.north east) {\includegraphics[width=.2\paperwidth]{img/fh_stralsund}};
+		\node[anchor=north east] at (current page.north east) {\includegraphics[width=.183\paperwidth]{img/hs_stralsund}};
 	\end{tikzpicture}
 }

@@ -21,43 +21,21 @@
 {
 	\vskip.3cm
 	\begin{beamercolorbox}[wd=.7\paperwidth,ht=1.2cm]{frametitle}%
-		\usebeamerfont{frametitle} \insertframetitle \\
-		\usebeamerfont{framesubtitle} \beamer@ifempty{\insertframesubtitle}{}{\insertframesubtitle}
+		\usebeamerfont{frametitle}\insertframetitle\\%
+		\usebeamerfont{framesubtitle}\beamer@ifempty{\insertframesubtitle}{}{\insertframesubtitle}%
 	\end{beamercolorbox}%
 	
 	\begin{tikzpicture}[remember picture,overlay]
-		\node[anchor=north east,yshift=-3pt,xshift=-10pt] at (current page.north east) {\includegraphics[width=.2\paperwidth]{img/fh_stralsund}};
-	\end{tikzpicture}	
+		\node[anchor=north east] at (current page.north east) {\includegraphics[width=.183\paperwidth]{img/hs_stralsund}};%
+	\end{tikzpicture}
 }
 
 \defbeamertemplate*{footline}{stralsund}[1][]
 {
 	\leavevmode
-	\begin{beamercolorbox}[wd=\authorboxwd,ht=.4cm,dp=.05cm,left,leftskip=.2cm]{author in head/foot}%
-		\usebeamerfont{author in head/foot}\insertauthor~~\beamer@ifempty{\insertshortinstitute}{}{(\insertshortinstitute)}
+	\begin{beamercolorbox}[wd=\paperwidth,ht=.053\paperheight,sep=.1cm,center]{tagline}%
+		\usebeamerfont{tagline}{\HOSTstring}
 	\end{beamercolorbox}%
-	\begin{beamercolorbox}[wd=\taglineboxwd,ht=.4cm,dp=.05cm]{tagline-de}%
-		\usebeamerfont{tagline}praxis verstehen -- chancen erkennen -- zukunft gestalten
-		\begin{beamercolorbox}[wd=\taglineboxwd,ht=.15cm,dp=.05cm]{tagline-en}%
-			\usebeamerfont{tagline}understanding reality -- facing challenges -- creating future
-		\end{beamercolorbox}%
-	\end{beamercolorbox}%
-	\begin{beamercolorbox}[wd=.1cm,ht=.4cm,center]{}%
-	\end{beamercolorbox}%
-	\begin{beamercolorbox}[wd=\sectionboxwd,ht=.4cm,dp=.05cm,center]{section in head/foot}%
-		\usebeamerfont{section in head/foot}\insertframenumber
-	\end{beamercolorbox}%
-}
-
-\defbeamertemplate*{sidebar canvas left}{stralsund}[1][]
-{
- \vskip2cm
- \begin{beamercolorbox}[wd=.8cm,ht=.15cm]{orangebox}
- \end{beamercolorbox}
- \vskip.2cm
- \begin{beamercolorbox}[wd=.8cm]{sidebar}
-	 \hspace{.3cm}\rotatebox{90}{\inserttitle}
- \end{beamercolorbox}
 }
 
 \mode<all>
